@@ -28,11 +28,10 @@ spring:
 
             
         - id: customer-service
-          uri: lb://CUSTOMER-ACCOUNT
+          uri: lb://CUSTOMER-SERVICE
           predicates:
             - Path=/customers/**
-          filters:
-            - StripPrefix=1
+        
 
 logging:
   level:
@@ -41,6 +40,7 @@ logging:
 
 jwt:
   secret: my-super-secret-jwt-key-which-is-at-least-32-chars
+
 
 
 
