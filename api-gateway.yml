@@ -11,9 +11,8 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
-          filters:
-            - StripPrefix=1
 
+            
         - id: customer-service
           uri: lb://CUSTOMER-ACCOUNT
           predicates:
@@ -24,3 +23,4 @@ spring:
 logging:
   level:
     org.springframework.cloud.gateway: INFO
+
