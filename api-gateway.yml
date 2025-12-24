@@ -24,3 +24,9 @@ logging:
     org.springframework.cloud.gateway: INFO
 
 
+jwt:
+  secret: your_shared_secret_key_here
+
+
+
+
