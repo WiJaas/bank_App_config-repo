@@ -25,7 +25,8 @@ logging:
 
 
 jwt:
-  secret: your_shared_secret_key_here
+  secret: my-super-secret-jwt-key-which-is-at-least-32-chars
+
 
 
 
