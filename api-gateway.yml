@@ -21,17 +21,17 @@ spring:
           enabled: false
 
       routes:
-        - id: auth-service
+
+        - id: auth-service-auth
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
 
-            
-        - id: customer-service
-          uri: lb://CUSTOMER-SERVICE
+        - id: auth-service-clients
+          uri: lb://AUTH-SERVICE
           predicates:
-            - Path=/customers/**
-        
+            - Path=/clients/**
+
 
 logging:
   level:
@@ -40,6 +40,7 @@ logging:
 
 jwt:
   secret: my-super-secret-jwt-key-which-is-at-least-32-chars
+
 
 
 
