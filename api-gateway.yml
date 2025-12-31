@@ -31,6 +31,17 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/clients/**
+            
+        - id: account-microservice-accounts
+          uri: lb://ACCOUNT-MICROSERVICE
+          predicates:
+            - Path=/accounts/**
+
+        - id: account-microservice-transactions
+          uri: lb://ACCOUNT-MICROSERVICE
+          predicates:
+            - Path=/transactions/**
+
 
 
 logging:
@@ -40,6 +51,7 @@ logging:
 
 jwt:
   secret: my-super-secret-jwt-key-which-is-at-least-32-chars
+
 
 
 
